@@ -2,6 +2,9 @@
 var http = require("http");
 var PORT = process.env.PORT || 3000;
 var IP = process.env.IP || '127.0.0.1'
+if(IP=='127.0.0.1'){
+    console.log(">----EJECUTANDO EN NODE")
+}
 // crear un servidor e basico 
 var server = http.createServer(function (req,res){
     // aramar la respuesta
