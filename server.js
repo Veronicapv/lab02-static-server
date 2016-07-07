@@ -1,5 +1,6 @@
 //http
 var http = require("http");
+var fs = require('fs');
 var PORT = process.env.PORT || 3000;
 var IP = process.env.IP || '127.0.0.1';
 if(IP=='127.0.0.1'){
@@ -13,6 +14,17 @@ var server = http.createServer(function (req,res){
         "Content-Type":"text/html",
         "Server":"ITGAM4.2.4"
     }); 
+    //lectura del archivo a servir
+    fs.readFile('./static/index.html','utf8',function(err, content){
+        if(err){
+            res.write("<h1>Error de lectura</h1>");
+            res.end();
+        }else{
+            res.write(content);
+            res.end();
+        }
+    });
+    
     // enviamos la respuesta
 res.write("<h1>Luis Cruz</h1>");
 // cerra la conexion
