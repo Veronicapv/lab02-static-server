@@ -1,5 +1,5 @@
 {
-  "name": "0.0.0",
+  "name": "(lab02-httpserver)",
   "version": "0.0.0",
   "description": "servidor estatico en node",
   "main": "server.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Veronicapv/lab02-static-server.git"
+    "url": "git+https://github.com/LACB93/lacb.git"
   },
   "keywords": [
     "node",
@@ -17,10 +17,10 @@
     "-server",
     "veb"
   ],
-  "author": "pikacha16@hotmail.com",
+  "author": "luis.cruzbenitez@gmail.com",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Veronicapv/lab02-static-server/issues"
+    "url": "https://github.com/LACB93/lab02-static-server/issues"
   },
-  "homepage": "https://github.com/Veronicapv/lab02-static-server#readme"
+  "homepage": "https://github.com/LACB93/lab02-static-server#readme"
 }
