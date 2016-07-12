@@ -2,6 +2,7 @@
 var http = require("http");
 var fs = require('fs');
 var config = require("./config/config.js");
+var colors = require ('colors');
 var staticServer = require ('./internals/static-server');
 //obteniendo las configuraciones
 // del modulo de configuraciones
@@ -14,6 +15,11 @@ if(IP=='127.0.0.1');{
 var server = http.createServer(function (req,res){
 //obtener la url del archivo 
 var url = req.url;
+if (url =="/"){
+    url = "/index.html";
+}
+console.log(` > URL SOLICITADA: ${url}...........`.yellow);
+
 //sirvo la url con i server estatico 
 staticServer.server(url, res);
 });
