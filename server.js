@@ -2,8 +2,8 @@
 var http = require("http"),
 fs = require('fs'),
 config = require("./config/config.js"),
-colors = require ('colors'),
 staticServer = require ('./internals/static-server'),
+colors = require ('colors'),
 handlers = require ('./internals/handlers.js');
 //obteniendo las configuraciones
 // del modulo de configuraciones

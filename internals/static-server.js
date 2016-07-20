@@ -8,6 +8,7 @@ exports.server = function (url, res) {
     //acompletar el static-path
     var filePath = config.STATIC_PATH + url;
     //verificando si existe  o no 
+    console.log(">url;"+ url);
     //el archivo dentro del server 
     fs.exists(filePath, function (exists) {
         if (exists) {
