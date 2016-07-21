@@ -36,8 +36,8 @@ exports.server = function (url, res) {
             });
         } else {
             //mando un codigo 404
-            res.writeHead(404, {
-                'Content-Type': 'text/html',
+            res.writeHead(404,{
+                'Content-Type':'text/html',
                 'server': 'pilgrimsHawks@2.1.2'
             });
             res.end("<h1>Error 404: Recuersos Dañado </h1>");
