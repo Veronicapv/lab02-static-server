@@ -1,5 +1,5 @@
 //http
-var http = require("http"),
+var http = require("http");
 fs = require('fs'),
 config = require("./config/config.js"),
 staticServer = require ('./internals/static-server'),
@@ -15,6 +15,7 @@ if(IP=='127.0.0.1');{
 
 var server = http.createServer(function (req,res){
 //obtener la url del archivo 
+//se hace la peticion de uan variable 
 var url = req.url;
 if (url =="/"){
     //sirve el index
@@ -28,7 +29,7 @@ if (typeof(handlers[url])===' function'){
     handlers[url](req, res)
 
 }else{
-console.log(` > URL SOLICITADA: ${url}...........`.yellow);
+console.log(` > URL Solicitada: ${url}...........`.yellow);
 
 //sirvo la url con i server estatico 
 staticServer.server(url, res);
@@ -36,5 +37,5 @@ staticServer.server(url, res);
 });
 //poner a trabajar al a servidor 
 server.listen(PORT,IP,function () {
-    console.log(`> Server listening http://${IP}:${PORT}...`);
+    console.log(`> Server listening @http://${IP}:${PORT}...`);
 });

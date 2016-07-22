@@ -11,7 +11,7 @@
     "static-server",
     "web"
   ],
-  "homepage": "https://github.com/Veronicapv/lab02-static-server.git",
+  "homepage": "https://github.com/Veronicapv/lab02-static-server",
   "private": true,
   "ignore": [
     "**/.*",
