@@ -20,17 +20,18 @@ module.exports = {
          JSON.stringify(objetoRespuesta);
          // Envio la respuesta al cliente
           res.end(jsonResponse); 
-        res.end(jsonResponse);
 },
 "/getfortune":function(req, res){
-var fortunePaper={
-   "mensaje":"La honestidad es un regalo caro no lo esperes de gente barata"
-};
+    console.log(">Se solicita fortuna...");
+//se optiene el msj de la serte
+//var fortunePaper={
+  // "mensaje":"La honestidad es un regalo caro no lo esperes de gente barata"
+//};
 // se configura el resultado de respuesta 
 // http
-res.writeHead(200,{
-"Content_Type": "application/json"
-});
+//res.writeHead(200,{
+//"Content_Type": "application/json"
+//});
 // se optiene el msj de la suerte 
 //var fortune paper
 //"mensaje "
@@ -42,14 +43,8 @@ fortune.getFortune(function(fortunePaper){
              // HTTP
             res.writeHead(200,{
                  "Content-Type" : "application/json"
-             });
-             // Respondemos el Objeto
-            res.end(fortunePaper);
-        });
-         // Parseando a string el objetoRespuesta
-         // de respuesta
-         var jsonResponse = JSON.stringify(fortunePaper);
-         // Respondemos el Objeto
-    res.end(jsonResponse);
+                  });
+    res.end(fortuneResponse);
+});
 }
 };
